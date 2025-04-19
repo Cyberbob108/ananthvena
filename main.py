@@ -23,13 +23,13 @@ caption_chain = caption_prompt | gemini_model
 
 import streamlit as st
 
-st.header("YT caption Generator -By Vena")
+st.header("Instagram Caption Generator -By Vena for Devi")
 
-st.subheader("Generate Youtube captions using Generative AI")
+st.subheader("Generate Instagram captions using Generative AI")
 
 topic = st.text_input("Topic")
 
-number = st.number_input("Number of captions ", min_value = 1, max_value = 10, value = 1, step = 1)
+number = st.number_input("Number of captions ", min_value = 1, max_value = 25, value = 1, step = 1)
 
 if st.button("Generate"):
     captions = caption_chain.invoke({"number" : number, "topic" : topic})
